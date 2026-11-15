@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#161d5c" />
+  <title>Odonto Metal | Odontologia na Sede dos Metalúrgicos de Guarulhos</title>
+  <link rel="icon" type="image/png" href="assets/logo-odonto-metal.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand">
+        <img src="assets/logo-odonto-metal.png" alt="Logo Odonto Metal" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">ODONTO METAL</span>
+          <span class="brand-sub">Sindicato dos Metalúrgicos • Guarulhos</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#institucional">Missão &amp; Valores</a>
+        <a href="#calendario">Calendário</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#localizacao">Onde Estamos</a>
+        <button type="button" class="btn-admin-nav" id="openAdminModalBtn" title="Acesso Administrativo">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span id="adminNavText">Área ADM</span>
+        </button>
+        <a href="#agendamento" class="btn btn-gold btn-sm">Agendar WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Barra de Status ADM Ativo -->
+  <div class="admin-banner hidden" id="adminBanner">
+    <div class="container admin-banner-inner">
+      <span><strong>Modo Administrador Ativo:</strong> Você pode alterar datas de expediente no calendário e publicar/excluir novidades.</span>
+      <button type="button" class="btn btn-sm btn-outline-light" id="logoutAdminBtn">Sair do ADM</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-pattern"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="dot-gold"></span> Atendimento Oficial na Sede dos Metalúrgicos de Guarulhos
+        </div>
+        <h1>Cuidando do sorriso de quem move a <span class="text-gold">indústria</span>.</h1>
+        <p class="hero-desc">
+          Estrutura odontológica completa, moderna e humanizada dentro da Sede do Sindicato dos Metalúrgicos de Guarulhos. Condições especiais para <strong>sócios e dependentes</strong>, além de atendimento aberto ao público <strong>particular</strong>.
+        </p>
+        <div class="hero-actions">
+          <a href="#agendamento" class="btn btn-gold btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#calendario" class="btn btn-outline-light btn-lg">Ver Dias de Atendimento</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">Sede Oficial</span>
+            <span class="stat-label">Metalúrgicos Guarulhos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Seg a Sex • 08h–17h50</span>
+            <span class="stat-label">Sábados até 12h</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Sócios &amp; Particular</span>
+            <span class="stat-label">Atendimento para todos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="logo-showcase-card">
+          <div class="logo-ring">
+            <img src="assets/logo-odonto-metal.png" alt="Emblema Odonto Metal" />
+          </div>
+          <h3>Odonto Metal</h3>
+          <p>Excelência em Saúde Bucal</p>
+          <div class="card-tags">
+            <span>Prevenção</span>
+            <span>Implantes</span>
+            <span>Ortodontia</span>
+            <span>Urgência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missão, Visão e Valores -->
+  <section class="section section-light" id="institucional">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Nossa Identidade</span>
+        <h2>Missão, Visão e Valores</h2>
+        <p>Compromisso ético, técnico e humano com a família metalúrgica e toda a comunidade de Guarulhos.</p>
+      </div>
+
+      <div class="mvv-grid">
+        <article class="mvv-card">
+          <div class="mvv-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Missão</h3>
+          <p>
+            Promover saúde bucal de excelência com acolhimento, tecnologia e preços acessíveis, garantindo bem-estar e qualidade de vida aos trabalhadores metalúrgicos, seus dependentes e pacientes particulares de Guarulhos.
+          </p>
+        </article>
+
+        <article class="mvv-card mvv-card-featured">
+          <div class="mvv-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Visão</h3>
+          <p>
+            Ser referência regional em odontologia sindical e comunitária, reconhecida pela resolutividade clínica, transparência nos tratamentos e satisfação contínua de cada paciente atendido em nossa clínica.
+          </p>
+        </article>
+
+        <article class="mvv-card">
+          <div class="mvv-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Valores</h3>
+          <ul class="values-list">
+            <li><strong>Respeito ao Trabalhador:</strong> Atendimento digno, ágil e sem burocracia.</li>
+            <li><strong>Ética &amp; Transparência:</strong> Diagnósticos claros e planos honestos.</li>
+            <li><strong>Excelência Clínica:</strong> Biossegurança rigorosa e atualização constante.</li>
+            <li><strong>Humanização:</strong> Escuta ativa e cuidado sem medo ou dor.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendário de Atendimentos -->
+  <section class="section section-navy" id="calendario">
+    <div class="container">
+      <div class="section-header text-center light">
+        <span class="eyebrow text-gold">Agenda Mensal</span>
+        <h2>Calendário de Atendimentos</h2>
+        <p>De segunda a sexta das 08h às 17h50 e aos sábados até as 12h. Consulte abaixo eventuais emendas de feriados ou horários especiais.</p>
+      </div>
+
+      <div class="calendar-wrapper">
+        <div class="calendar-controls">
+          <button class="cal-nav-btn" id="prevMonth" aria-label="Mês anterior">&larr; Anterior</button>
+          <h3 id="currentMonthLabel">Novembro 2026</h3>
+          <button class="cal-nav-btn" id="nextMonth" aria-label="Próximo mês">Próximo &rarr;</button>
+        </div>
+
+        <div class="calendar-legend">
+          <div class="legend-item"><span class="status-dot status-open"></span> Atendimento Normal (Seg–Sex: 08h às 17h50)</div>
+          <div class="legend-item"><span class="status-dot status-special"></span> Sábado / Horário Especial (até 12h)</div>
+          <div class="legend-item"><span class="status-dot status-closed"></span> Sem Atendimento (Domingo / Feriado / Emenda)</div>
+        </div>
+
+        <div class="calendar-weekdays">
+          <div>Dom</div>
+          <div>Seg</div>
+          <div>Ter</div>
+          <div>Qua</div>
+          <div>Qui</div>
+          <div>Sex</div>
+          <div>Sáb</div>
+        </div>
+
+        <div class="calendar-grid" id="calendarGrid">
+          <!-- Preenchido dinamicamente pelo js/script.js -->
+        </div>
+
+        <!-- Painel de Edição Rápida de Data (Visível apenas quando ADM estiver logado) -->
+        <div class="admin-calendar-editor hidden" id="adminCalendarEditor">
+          <div class="editor-header">
+            <span class="mini-badge gold">Painel ADM • Editar Expediente</span>
+            <h4 id="editorDateHeading">Clique em uma data acima para editar</h4>
+          </div>
+          <form id="calendarRuleForm" class="calendar-rule-form">
+            <input type="hidden" id="editDateKey" />
+            <div class="form-row-3">
+              <div>
+                <label for="editDayStatus">Situação do Dia (Cor no Calendário)</label>
+                <select id="editDayStatus">
+                  <option value="open">Atendimento Normal (08h às 17h50)</option>
+                  <option value="special">Horário Especial / Reduzido (ex: até 12h)</option>
+                  <option value="closed">Sem Atendimento (Feriado / Emenda / Fechado)</option>
+                </select>
+              </div>
+              <div>
+                <label for="editDayLabelSelect">Etiqueta no Quadradinho do Dia</label>
+                <select id="editDayLabelSelect">
+                  <option value="Atende">Atende</option>
+                  <option value="Fechado">Fechado</option>
+                  <option value="Personalizado">Personalizado (escrever abaixo)</option>
+                </select>
+                <input type="text" id="editDayLabelCustom" class="hidden" style="margin-top: 8px;" placeholder="Ex: Emenda / Até 12h / Feriado" maxlength="18" />
+              </div>
+              <div>
+                <label for="editDayDesc">Mensagem Explicativa ao Paciente (quando ele clicar no dia)</label>
+                <input type="text" id="editDayDesc" placeholder="Ex: Fechado devido à emenda de feriado." required />
+              </div>
+            </div>
+            <div class="form-actions-right">
+              <button type="button" class="btn btn-ghost btn-sm" id="resetDayRuleBtn">Restaurar Padrão do Dia</button>
+              <button type="submit" class="btn btn-navy btn-sm">Salvar Alteração na Data</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="calendar-detail-box" id="calendarDetailBox">
+          <div class="detail-info">
+            <strong id="selectedDateTitle">Selecione uma data no calendário</strong>
+            <p id="selectedDateDesc">Clique em qualquer dia do mês para ver o status detalhado de funcionamento e horários disponíveis.</p>
+          </div>
+          <a href="#agendamento" class="btn btn-gold btn-sm">Agendar para esta data</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mural de Novidades -->
+  <section class="section section-light" id="novidades">
+    <div class="container">
+      <div class="news-top-bar">
+        <div>
+          <span class="eyebrow">Fique por Dentro</span>
+          <h2>Novidades &amp; Comunicados</h2>
+        </div>
+        <button class="btn btn-outline-navy btn-sm hidden" id="toggleAdminNewsBtn">+ Publicar Novidade</button>
+      </div>
+
+      <!-- Painel para Publicar Novidades (Somente ADM) -->
+      <div class="admin-news-panel hidden" id="adminNewsPanel">
+        <h4>Nova Publicação no Mural (Área ADM)</h4>
+        <form id="newsForm" class="news-form">
+          <div class="form-row">
+            <input type="text" id="newsTitle" placeholder="Título da novidade (ex: Expediente no Feriado Prolongado)" required />
+            <select id="newsCategory">
+              <option value="Comunicado">Comunicado</option>
+              <option value="Campanha">Campanha</option>
+              <option value="Novo Serviço">Novo Serviço</option>
+              <option value="Benefício Sócio">Benefício Sócio</option>
+            </select>
+          </div>
+          <textarea id="newsBody" rows="3" placeholder="Escreva os detalhes da novidade..." required></textarea>
+          <div class="form-actions-right">
+            <button type="button" class="btn btn-ghost btn-sm" id="cancelNewsBtn">Cancelar</button>
+            <button type="submit" class="btn btn-navy btn-sm">Publicar no Site</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="news-grid" id="newsGrid">
+        <!-- Cards renderizados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Agendamento Inteligente WhatsApp -->
+  <section class="section section-gradient" id="agendamento">
+    <div class="container booking-grid">
+      <div class="booking-info">
+        <span class="eyebrow text-gold">Atendimento Rápido</span>
+        <h2>Agende sua consulta direto pelo WhatsApp</h2>
+        <p>
+          Escolha abaixo se você é <strong>Sócio do Sindicato</strong> ou atendimento <strong>Particular</strong>. Preparamos sua mensagem automaticamente para agilizar sua triagem na recepção.
+        </p>
+
+        <div class="info-cards-stack">
+          <div class="mini-info-card">
+            <span class="mini-badge gold">Sócio Metalúrgico</span>
+            <p>Informe o <strong>número da carteirinha</strong>, seu <strong>nome completo</strong> e seu <strong>CPF</strong> para validar seu benefício.</p>
+          </div>
+          <div class="mini-info-card">
+            <span class="mini-badge white">Paciente Particular</span>
+            <p>Não precisa de carteirinha! Basta informar seu <strong>nome completo</strong> e iniciar o atendimento com nossa equipe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <h3>Iniciar Atendimento WhatsApp</h3>
+        <p class="booking-sub">Selecione seu perfil para preencher:</p>
+
+        <!-- Seletor Sócio vs Particular -->
+        <div class="profile-switcher" role="tablist">
+          <button type="button" class="switch-btn active" id="btnTypeSocio" data-type="socio">
+            Sou Sócio
+          </button>
+          <button type="button" class="switch-btn" id="btnTypeParticular" data-type="particular">
+            Sou Particular
+          </button>
+        </div>
+
+        <form id="whatsappForm" class="whatsapp-form">
+          <!-- Campo Nome (Comum a ambos) -->
+          <div class="form-group">
+            <label for="patientName">Nome Completo *</label>
+            <input type="text" id="patientName" placeholder="Digite seu nome completo" required />
+          </div>
+
+          <!-- Campos exclusivos para Sócio -->
+          <div id="socioFields" class="socio-fields">
+            <div class="form-group">
+              <label for="cardNumber">Número da Carteirinha de Sócio *</label>
+              <input type="text" id="cardNumber" placeholder="Ex: 123456-0" required />
+            </div>
+
+            <div class="form-group">
+              <label for="patientCpf">CPF *</label>
+              <input type="text" id="patientCpf" placeholder="000.000.000-00" maxlength="14" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp btn-lg btn-block">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+            Continuar no WhatsApp
+          </button>
+          <small class="form-note">Você será redirecionado para o WhatsApp oficial da Odonto Metal com os dados já preenchidos.</small>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização -->
+  <section class="section section-light" id="localizacao">
+    <div class="container location-grid">
+      <div>
+        <span class="eyebrow">Fácil Acesso</span>
+        <h2>Onde Estamos</h2>
+        <p class="location-lead">
+          Atendemos dentro da <strong>Sede do Sindicato dos Metalúrgicos de Guarulhos e Região</strong>, no Centro de Guarulhos.
+        </p>
+
+        <ul class="location-details">
+          <li>
+            <strong>Endereço:</strong>
+            <span>Rua Harry Simonsen, 202 — Centro, Guarulhos - SP, CEP 07110-120</span>
+          </li>
+          <li>
+            <strong>Horário de Atendimento:</strong>
+            <span>Segunda a Sexta: 08h00 às 17h50 | Sábados: 08h00 às 12h00 (consulte feriados/emendas no calendário)</span>
+          </li>
+          <li>
+            <strong>Público Atendido:</strong>
+            <span>Sócios metalúrgicos, dependentes e pacientes particulares</span>
+          </li>
+        </ul>
+
+        <a href="https://maps.google.com/?q=Rua+Harry+Simonsen,+202+-+Centro,+Guarulhos+-+SP" target="_blank" rel="noopener noreferrer" class="btn btn-navy">
+          Abrir no Google Maps
+        </a>
+      </div>
+
+      <div class="map-card">
+        <iframe
+          title="Mapa Sede Sindicato dos Metalúrgicos de Guarulhos"
+          src="https://www.google.com/maps?q=Rua+Harry+Simonsen,+202,+Guarulhos,+SP&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo-odonto-metal.png" alt="Odonto Metal" />
+        <div>
+          <h4>ODONTO METAL</h4>
+          <p>Clínica Odontológica na Sede do Sindicato dos Metalúrgicos de Guarulhos.</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#institucional">Missão, Visão e Valores</a>
+        <a href="#calendario">Calendário</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#agendamento">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Odonto Metal — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Modal de Login Administrador -->
+  <div class="modal-backdrop hidden" id="adminLoginModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Acesso Administrativo</h3>
+        <button type="button" class="modal-close" id="closeAdminModalBtn">&times;</button>
+      </div>
+      <p class="modal-desc">Entre com a senha da equipe para gerenciar datas de expediente, feriados emendados e novidades.</p>
+      <form id="adminLoginForm" class="whatsapp-form">
+        <div class="form-group">
+          <label for="adminPassword">Senha de Administrador</label>
+          <input type="password" id="adminPassword" placeholder="Digite a senha (padrão: odontometal2026)" required />
+        </div>
+        <p class="login-error hidden" id="loginErrorMsg">Senha incorreta. Tente novamente.</p>
+        <button type="submit" class="btn btn-navy btn-block">Entrar no Painel ADM</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="#agendamento" class="floating-wa" aria-label="Agendar pelo WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+    <span>Fale no WhatsApp</span>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
