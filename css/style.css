@@ -441,7 +441,7 @@ h1, h2, h3, h4, .brand-title {
 .section-header.light h2 { color: var(--white); }
 .section-header.light p { color: rgba(255, 255, 255, 0.8); }
 
-/* Missão, Visão e Valores */
+/* MissÃ£o, VisÃ£o e Valores */
 .mvv-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -495,12 +495,12 @@ h1, h2, h3, h4, .brand-title {
 }
 
 .values-list li::before {
-  content: "✓ ";
+  content: "âœ“ ";
   color: var(--gold-600);
   font-weight: 800;
 }
 
-/* Calendário */
+/* CalendÃ¡rio */
 .calendar-wrapper {
   background: var(--white);
   color: var(--slate-700);
@@ -620,7 +620,7 @@ h1, h2, h3, h4, .brand-title {
 .day-closed { background: #fef2f2; border-color: #fecaca; }
 .day-closed .cal-day-badge { background: #fee2e2; color: #b91c1c; }
 
-/* Painel ADM Calendário */
+/* Painel ADM CalendÃ¡rio */
 .admin-calendar-editor {
   margin-top: 22px;
   padding: 22px;
@@ -880,7 +880,7 @@ h1, h2, h3, h4, .brand-title {
   margin-top: 12px;
 }
 
-/* Localização */
+/* LocalizaÃ§Ã£o */
 .location-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -1065,14 +1065,14 @@ h1, h2, h3, h4, .brand-title {
 
 
 /* ==========================================================
-   OTIMIZAÇÃO RESPONSIVA COMPLETA (TABLETS E CELULARES)
+   OTIMIZAÃ‡ÃƒO RESPONSIVA COMPLETA (TABLETS E CELULARES)
    ========================================================== */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Evita zoom automático no iPhone ao tocar nos inputs */
+/* Evita zoom automÃ¡tico no iPhone ao tocar nos inputs */
 @media (max-width: 768px) {
   input, select, textarea {
     font-size: 16px !important;
@@ -1175,7 +1175,7 @@ html, body {
     height: 140px;
   }
 
-  /* Seções Gerais */
+  /* SeÃ§Ãµes Gerais */
   .section {
     padding: 56px 0;
   }
@@ -1188,7 +1188,7 @@ html, body {
     padding: 24px 20px;
   }
 
-  /* Calendário Mobile */
+  /* CalendÃ¡rio Mobile */
   .calendar-wrapper {
     padding: 14px 10px;
     border-radius: var(--radius-md);
@@ -1281,7 +1281,7 @@ html, body {
     padding: 10px 6px;
   }
 
-  /* Localização Mobile */
+  /* LocalizaÃ§Ã£o Mobile */
   .map-card {
     height: 260px;
   }
@@ -1290,7 +1290,7 @@ html, body {
     width: 100%;
   }
 
-  /* Footer & Botão Flutuante */
+  /* Footer & BotÃ£o Flutuante */
   .footer-grid {
     flex-direction: column;
     align-items: flex-start;
@@ -1337,4 +1337,83 @@ html, body {
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 50%;
+}
+
+
+/* ==========================================================
+   CORREÃ‡ÃƒO DEFINITIVA DO CALENDÃRIO NO CELULAR (ZERO VAZAMENTO)
+   ========================================================== */
+.calendar-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  width: 100%;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.cal-day {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cal-day-badge {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .calendar-wrapper {
+    padding: 14px 8px;
+  }
+
+  .calendar-controls {
+    gap: 6px;
+  }
+
+  .calendar-controls h3 {
+    font-size: 0.98rem;
+  }
+
+  .cal-nav-btn {
+    padding: 7px 9px;
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+
+  .calendar-weekdays {
+    gap: 3px;
+    font-size: 0.7rem;
+  }
+
+  .calendar-grid {
+    gap: 3px;
+  }
+
+  .cal-day {
+    min-height: 48px;
+    padding: 4px 2px;
+    border-radius: 6px;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .cal-day-num {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  .cal-day-badge {
+    font-size: 0.5rem;
+    padding: 2px 2px;
+    border-radius: 3px;
+    letter-spacing: -0.2px;
+  }
 }
